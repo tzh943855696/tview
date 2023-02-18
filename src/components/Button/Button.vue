@@ -16,17 +16,13 @@
     </span>
   </button>
 </template>
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
+<script setup lang="ts">
+import type { ButtonProps } from './types'
+// import { buttonProps } from './types'
+defineOptions({
   name: 'VkButton'
 })
-</script>
-<script setup lang="ts">
-// import type { ButtonProps } from './types'
-import { buttonProps } from './types'
-defineProps(buttonProps)
+defineProps<ButtonProps>()
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
